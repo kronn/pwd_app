@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+# encoding: utf-8
 # vim:ft=ruby
 require 'rubygems'
 require 'sinatra'
@@ -8,7 +10,7 @@ $LOAD_PATH << root_dir
 # set :environment, ENV['RACK_ENV'].to_sym
 set :environment, :development
 set :root,        root_dir
-set :app_file,    File.join(root_dir, 'app', 'pwd.rb')
+set :app_file,    "#{root_dir}/app/pwd.rb"
 disable :run
 
 require "app/pwd"
