@@ -9,3 +9,7 @@ post '/transform' do
   @password = PasswordString.new(request.POST["plainpass"]).to_s
   erb :result
 end
+
+get '/about' do
+  erb :about
+end
