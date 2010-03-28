@@ -19,9 +19,9 @@ $LOAD_PATH << root_dir
 
 set :environment, ( ENV['RACK_ENV'] || 'development' ).to_sym
 set :root,        root_dir
-set :app_file,    "#{root_dir}/app/pwd.rb"
+set :app_file,    "#{root_dir}/app.rb"
 disable :run
 
-require "app/pwd"
+require "app"
 
 run Sinatra::Application
