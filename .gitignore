@@ -1,1 +1,4 @@
 tmp/restart.txt
+.bundle
+Gemfile.lock
+vendor/cache/
