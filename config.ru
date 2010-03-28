@@ -17,8 +17,7 @@ require 'sinatra'
 root_dir = File.dirname(__FILE__)
 $LOAD_PATH << root_dir
 
-# set :environment, ENV['RACK_ENV'].to_sym
-set :environment, :development
+set :environment, ( ENV['RACK_ENV'] || 'development' ).to_sym
 set :root,        root_dir
 set :app_file,    "#{root_dir}/app/pwd.rb"
 disable :run
