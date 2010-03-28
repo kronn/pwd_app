@@ -1,0 +1,24 @@
+/* vim:ft=css:fdm=marker */
+
+body, body * {
+  font-family:sans-serif;
+}
+
+#wrapper {
+  width:400px;
+  margin:0 auto;
+}
+
+form {
+  width:200px;
+  margin:0 auto;
+}
+
+h1 {
+  text-align:center;
+  font-family:fantasy;
+}
+
+.result {
+  font-family:monospace;
+}
