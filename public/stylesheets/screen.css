@@ -19,6 +19,10 @@ h1 {
   font-family:fantasy;
 }
 
+h2 {
+  font-size:1.1em;
+}
+
 .result {
   font-family:monospace;
 }
