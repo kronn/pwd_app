@@ -12,16 +12,10 @@ rescue LoadError
   Bundler.setup
 end
 
-require 'sinatra'
-
 root_dir = File.dirname(__FILE__)
-$LOAD_PATH << root_dir
+$LOAD_PATH << root_dir unless $LOAD_PATH.include?(root_dir)
 
-set :environment, ( ENV['RACK_ENV'] || 'development' ).to_sym
-set :root,        root_dir
-set :app_file,    "#{root_dir}/app.rb"
-disable :run
+require 'sinatra/base'
+require 'app'
 
-require "app"
-
-run Sinatra::Application
+run PasswordApp

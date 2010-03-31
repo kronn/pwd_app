@@ -1,15 +1,21 @@
 require 'vendor/to_pwd/lib/password_transformation'
 require 'erb'
 
-get '/' do
-  erb :index
-end
+class PasswordApp < Sinatra::Base
+  set :environment, ( ENV['RACK_ENV'] || 'development' ).to_sym
+  set :root,        File.dirname(__FILE__)
+  disable :run
 
-post '/transform' do
-  @password = PasswordString.new(request.POST["plainpass"]).to_s
-  erb :result
-end
+  get '/' do
+    erb :index
+  end
 
-get '/about' do
-  erb :about
+  post '/transform' do
+    @password = PasswordString.new(request.POST["plainpass"]).to_s
+    erb :result
+  end
+
+  get '/about' do
+    erb :about
+  end
 end
