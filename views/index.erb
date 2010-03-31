@@ -1,10 +1,13 @@
-      <h1>Password Generator</h1>
-      <p>"Easy to remember phrase, word or sentence".to_pwd<br>
-        =&gt; "<span class="result">Etrpwos</span>"<p>
+<h1>Password Generator</h1>
+<p>"Easy to remember phrase, word or sentence".to_pwd<br>
+  =&gt; "<span class="result">Etrpwos</span>"</p>
 
-      <form action="/transform" method="POST">
-        <p><input type="text" name="plainpass" /> <input type="submit" value="transform" /></p>
-      </form>
+<form action="/transform" method="POST">
+  <p><select size="1" name="algorithm">
+      <option value="PasswordString" label="PasswordString" />
+  </select></p>
+  <p><input type="text" name="plainpass" /> <input type="submit" value="transform" /></p>
+</form>
 
-      <p>Pick your favorite word or sentence and convert it to a password which
-        is more secure than the usual "hello" or "password"</p>
+<p>Pick your favorite word or sentence and convert it to a password which
+  is more secure than the usual "hello1" or "password1"</p>
